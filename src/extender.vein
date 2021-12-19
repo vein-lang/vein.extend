@@ -1,0 +1,28 @@
+#use "vein/lang"
+
+#space "vein/compiler/api"
+
+public class ProjectSettings
+{}
+
+public class CompilationTarget
+{
+
+}
+
+public class VeinProject 
+{
+    public name: string;
+}
+
+public interface IPipelineAction
+{
+    action(target: CompilationTarget): void;
+}
+
+
+public static class Pipeline
+{
+    public hookEvent(name: string, action: IPipelineAction): void 
+    {}
+}
